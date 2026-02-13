@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite" parallel="methods" thread-count="1">
+    <listeners>
+        <listener class-name="listeners.ListenersClass"/>
+        <!--  <listener class-name="listeners.AnnotationTransformer"/>-->
+    </listeners>
+    <test name="LawyerUIAutomation">
+        <classes>
+            <class name="testcase.LoginTestCase"/>
+        </classes>
+    </test>
+</suite>
+
