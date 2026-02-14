@@ -8,6 +8,10 @@
     <test name="LawyerUIAutomation">
         <classes>
             <class name="testcase.LoginTestCase"/>
+            <class name="testcase.SlotBookingTestCase"/>
+            <class name="testcase.DayWiseSlotBookingTestCase"/>
+            <class name="testcase.EditDateWiseSlotBookingTestCase"/>
+            <class name="testcase.EditDayWiseSlotBookingTestCase"/>
         </classes>
     </test>
 </suite>

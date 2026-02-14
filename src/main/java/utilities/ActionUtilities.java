@@ -4,6 +4,9 @@ package utilities;
 import Device.DriverThreadManager;
 import constants.FrameworkConstants;
 import io.appium.java_client.AppiumBy;
+import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.android.nativekey.AndroidKey;
+import io.appium.java_client.android.nativekey.KeyEvent;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -53,13 +56,6 @@ public class ActionUtilities {
                     return true;
                 });
     }
-     /*   public String captureScreen1() throws IOException {
-        File sourceFile = ((TakesScreenshot) DriverFactory.getDriver()).getScreenshotAs(OutputType.FILE);
-        File destinationFile = new File(FrameworkConstants.getscreenshotPath());
-        FileUtils.copyFile(sourceFile, destinationFile);
-        byte[] imageByte = IOUtils.toByteArray(new FileInputStream(destinationFile));
-        return Base64.getEncoder().encodeToString(imageByte);
-    }*/
 
     public static String captureScreen() throws IOException {
         return ((TakesScreenshot) DriverThreadManager.getDriver()).getScreenshotAs(OutputType.BASE64);
@@ -72,6 +68,28 @@ public class ActionUtilities {
                         + ".scrollIntoView(new UiSelector().text(\"" + visibleText + "\"))"
         ));
     }
+
+    public void closeKeyboard() {
+
+        try {
+            AndroidDriver driver =
+                    (AndroidDriver) DriverThreadManager.getDriver();
+
+            if (driver.isKeyboardShown()) {
+                driver.hideKeyboard();
+            }
+
+        } catch (Exception e) {
+            try {
+                ((AndroidDriver) DriverThreadManager.getDriver())
+                        .pressKey(new KeyEvent(AndroidKey.BACK));
+            } catch (Exception ignored) {
+                System.out.println("Keyboard already closed.");
+            }
+        }
+    }
+
+
 
     public WebElement waitForElement(WebElement element) {
         WebDriverWait wait = new WebDriverWait(DriverThreadManager.getDriver(), Duration.ofSeconds(15));

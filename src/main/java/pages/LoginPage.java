@@ -2,11 +2,8 @@ package pages;
 
 import Device.DriverThreadManager;
 import config.ReadConfig;
-import io.appium.java_client.AppiumBy;
-import io.appium.java_client.pagefactory.AndroidBy;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -19,11 +16,12 @@ import java.time.Duration;
 
 
 public class LoginPage  extends ActionUtilities {
-    String Logout;
+    String text = "Logout";
 
     public LoginPage() {
 
-        PageFactory.initElements(new AppiumFieldDecorator(DriverThreadManager.getDriver()), this);    }
+        PageFactory.initElements(new AppiumFieldDecorator(DriverThreadManager.getDriver()), this);
+    }
 
     @FindBy(xpath = "//android.widget.Button[@text='Allow']")
     public WebElement notificationAllowButton;
@@ -68,8 +66,8 @@ public class LoginPage  extends ActionUtilities {
     }
 
     public void enterPassword() throws IOException {
-       sendKey(passwordField, ReadConfig.prop.getProperty("Password"));
-       // passwordField.sendKeys("Kasthuri@09");
+        sendKey(passwordField, ReadConfig.prop.getProperty("Password"));
+        // passwordField.sendKeys("Kasthuri@09");
     }
 
     public void clickLoginButton() throws IOException {
@@ -89,19 +87,31 @@ public class LoginPage  extends ActionUtilities {
 
     // ===== Complete Login Flow =====
 
-    public void loginFunction() throws IOException {
+    public void loginFunction() throws IOException, InterruptedException {
         click(mobileNumberField);
         enterMobileNumber();
         click(passwordField);
         enterPassword();
+        closeKeyboard();
+        Thread.sleep(2000);
         clickLoginButton();
     }
 
-    public void logoutFunction() throws IOException {
-        click(profileIcon);
+    public void logoutFunction() throws IOException, InterruptedException {
+       /* click(profileIcon);
         scrollToText("Logout");
         click(logoutButton);
         click(confirmButton);
+*/
 
+        click(profileIcon);
+
+        WebDriverWait wait = new WebDriverWait(DriverThreadManager.getDriver(), Duration.ofSeconds(15));
+        System.out.println("scroll started");
+
+        // Scroll until Logout is visible
+        scrollToText(text);
+        System.out.println("scroll stopped");
+        wait.until(ExpectedConditions.elementToBeClickable(confirmButton)).click();
     }
 }
