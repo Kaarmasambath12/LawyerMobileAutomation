@@ -1,5 +1,6 @@
 package listeners;
 
+import helper.EmailUtil;
 import org.testng.ISuite;
 import org.testng.ISuiteListener;
 import org.testng.ITestListener;
@@ -7,18 +8,24 @@ import org.testng.ITestResult;
 import report.ExtentLogger;
 import report.ExtentReport;
 
+import static appiumServerManager.StartAppium.startServer;
+import static appiumServerManager.StopAppium.stopServer;
+
 
 public class ListenersClass implements ITestListener, ISuiteListener {
 
     public void onStart(ISuite suite) {
+        startServer();
         ExtentReport.initReports();
     }
     public void onFinish(ISuite suite){
+        stopServer();
         try {
             ExtentReport.flushReport();
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
+        EmailUtil.sendReport();
     }
 
     public void onTestStart(ITestResult result){

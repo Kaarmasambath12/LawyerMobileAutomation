@@ -17,9 +17,6 @@ public class AndroidRealDevice implements interfaceDriver{
         capabilities.setCapability("platformVersion", "13");
         capabilities.setCapability("udid", "12a0ac04");
         capabilities.setCapability("deviceName", "realme 9 Pro 5G");
-        capabilities.setCapability("appPackage", "com.ionicframework.myschneiderretailer");
-        capabilities.setCapability("appActivity", "com.schneider.retailexperienceapp.screens.SplashScreenActivity");
-        capabilities.setCapability("unlockType", "pin");
         capabilities.setCapability("unlockKey", "123456");
         capabilities.setCapability("skipDeviceInitialization", true);
         capabilities.setCapability("skipServerInstallation", true);

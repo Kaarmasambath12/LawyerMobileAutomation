@@ -3,7 +3,7 @@
 <suite name="All Test Suite" parallel="methods" thread-count="1">
     <listeners>
         <listener class-name="listeners.ListenersClass"/>
-        <!--  <listener class-name="listeners.AnnotationTransformer"/>-->
+         <listener class-name="listeners.AnnotationTransformer"/>
     </listeners>
     <test name="LawyerUIAutomation">
         <classes>

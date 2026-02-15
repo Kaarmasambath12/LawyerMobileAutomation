@@ -22,7 +22,8 @@ public class AndroidEmulator implements interfaceDriver{
         options.setAppPackage("com.example.m_lawyer");
         options.setAppActivity("com.example.m_lawyer.MainActivity");
         options.setAppWaitActivity("*");
-        options.setNoReset(true);
+        options.setNoReset(false);
+        options.setFullReset(false);
         options.setAutoGrantPermissions(true);
 
 

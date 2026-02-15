@@ -1,5 +1,6 @@
 package listeners;
 
+import dataDriven.DataProviderClass;
 import org.testng.IAnnotationTransformer;
 import org.testng.annotations.ITestAnnotation;
 
@@ -10,8 +11,8 @@ public class AnnotationTransformer implements IAnnotationTransformer {
 
     @Override
     public void transform(ITestAnnotation annotation, Class testClass, Constructor testConstructor, Method testMethod) {
-        //annotation.setDataProvider("excelDataCheck");
-        //annotation.setDataProviderClass(DataProviderClass.class);
+        annotation.setDataProvider("excelDataCheck");
+        annotation.setDataProviderClass(DataProviderClass.class);
         annotation.setRetryAnalyzer(RetryFailedTests.class);
     }
 
