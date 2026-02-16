@@ -97,6 +97,21 @@ public class LoginPage  extends ActionUtilities {
         clickLoginButton();
     }
 
+    public void loginFunctionWithTestData(String mobileNumber, String password) throws IOException, InterruptedException {
+        Thread.sleep(2000);
+        click(mobileNumberField);
+        mobileNumberField.clear();
+        mobileNumberField.sendKeys(mobileNumber);
+        Thread.sleep(2000);
+        click(passwordField);
+        passwordField.clear();
+        passwordField.sendKeys(password);
+
+        closeKeyboard();
+
+        clickLoginButton();
+    }
+
     public void logoutFunction() throws IOException, InterruptedException {
        /* click(profileIcon);
         scrollToText("Logout");
@@ -114,4 +129,5 @@ public class LoginPage  extends ActionUtilities {
         System.out.println("scroll stopped");
         wait.until(ExpectedConditions.elementToBeClickable(confirmButton)).click();
     }
+
 }

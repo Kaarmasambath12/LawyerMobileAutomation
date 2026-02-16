@@ -15,9 +15,9 @@ public class DataProviderClass {
     public String [][] getData(){
 
         String loginData[][] = {
-                {"mailfortest542@gmail.com", "Welcome@123", "valid"},
-                {"mailfortest542@gmail.com", "Welcome@123", "valid"},
-                {"mailfortest542@gmail.com", "Welcome@123", "valid"}
+                {"9003349787", "Welcome@123", "invalid"},
+                {"9524557835", "Kasthuri@09", "valid"},
+
         };
         return loginData;
     }
@@ -25,7 +25,7 @@ public class DataProviderClass {
     @DataProvider(name = "excelDataCheck")
     public String [][] getExcelData() throws IOException {
 
-        String path = ".\\DataFile\\TestData.xlsx";
+        String path = ".\\ExcelFile\\Book1.xlsx";
         XLUtilities utilities = new XLUtilities(path);
         int totalRows = utilities.getRowCount("Sheet1");
         int totalCols = utilities.getCellCount("Sheet1", 1);
