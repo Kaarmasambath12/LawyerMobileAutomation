@@ -86,4 +86,9 @@ public class MyAvailabilityHelper {
                 .click();
     }
 
+    public static String getTodayDateForCalendar() {
+        return LocalDate.now()
+                .format(DateTimeFormatter.ofPattern("d, EEEE, MMMM d, yyyy")) + ", Today";
+    }
+
 }

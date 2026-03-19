@@ -61,11 +61,11 @@ public class ActionUtilities {
         return ((TakesScreenshot) DriverThreadManager.getDriver()).getScreenshotAs(OutputType.BASE64);
     }
 
-    public void scrollToText(String visibleText) {
+    public static void scrollToText(String visibleText) {
 
         DriverThreadManager.getDriver().findElement(AppiumBy.androidUIAutomator(
                 "new UiScrollable(new UiSelector().scrollable(true))"
-                        + ".scrollIntoView(new UiSelector().text(\"" + visibleText + "\"))"
+                        + ".scrollIntoView(new UiSelector().descriptionContains(\"" + visibleText + "\"))"
         ));
     }
 

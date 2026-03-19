@@ -1,0 +1,11 @@
+2026-03-10 20:27:08:106 [Appium] Welcome to Appium v3.1.2
+2026-03-10 20:27:08:108 [Appium] Non-default server args:
+2026-03-10 20:27:08:109 [Appium] { address: '127.0.0.1', loglevel: 'info', sessionOverride: true }
+2026-03-10 20:27:08:109 [Appium] Attempting to load driver uiautomator2...
+2026-03-10 20:27:08:830 [Appium] Appium REST http interface listener started on http://127.0.0.1:4723
+2026-03-10 20:27:08:830 [Appium] Available drivers:
+2026-03-10 20:27:08:831 [Appium]   - uiautomator2@6.7.10 (automationName 'UiAutomator2')
+2026-03-10 20:27:08:831 [Appium] Available plugins:
+2026-03-10 20:27:08:831 [Appium]   - images@4.1.0
+2026-03-10 20:27:08:831 [Appium] No plugins activated. Use the --use-plugins flag with names of plugins to activate
+2026-03-10 20:37:09:335 [c3be9306][HTTP] --> GET /session/c3be9306-85a8-4ca9-808f-bbed7ce3a326/window/rect 

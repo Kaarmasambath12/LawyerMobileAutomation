@@ -12,16 +12,17 @@ public class LoginTestCase extends BaseClass {
     public LoginPage loginPage;
 
 
-/*
     @Test
     public void loginTestCase() throws InterruptedException, IOException {
+        loginPage  = new LoginPage();
         loginPage.notificationFunction();
         loginPage.loginFunction();
       //  loginPage.logoutFunction();
-    }*/
+    }
 
-    @Test(dataProvider = "loginData",
-            dataProviderClass = DataProviderClass.class)
+  /* @Test(dataProvider = "loginData",
+           dataProviderClass = DataProviderClass.class)
+
     public void loginTestCaseWithTestData(String MobileNumber, String Password, String expectedStatus) throws IOException, InterruptedException {
         loginPage  = new LoginPage();
        Thread.sleep(2000);
@@ -29,7 +30,7 @@ public class LoginTestCase extends BaseClass {
         loginPage.loginFunctionWithTestData(MobileNumber, Password);
         System.out.println("Expected Result: " + expectedStatus);
 
-    }
+    }*/
 
 
 }

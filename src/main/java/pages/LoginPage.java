@@ -23,19 +23,19 @@ public class LoginPage  extends ActionUtilities {
         PageFactory.initElements(new AppiumFieldDecorator(DriverThreadManager.getDriver()), this);
     }
 
-    @FindBy(xpath = "//android.widget.Button[@text='Allow']")
+    @FindBy(id = "com.android.permissioncontroller:id/permission_allow_button")
     public WebElement notificationAllowButton;
 
-    @FindBy(xpath = "//android.view.View[@content-desc='Login']")
+    @FindBy(xpath = "//android.widget.Button[@content-desc=\"bottom_login_icon\"]")
     public WebElement loginLink;
 
-    @FindBy(xpath = "//android.widget.EditText[@password='false']")
+    @FindBy(xpath = "//android.widget.EditText[@text=\"mobile_number_text_field\"]/android.widget.EditText")
     public WebElement mobileNumberField;
 
-    @FindBy(xpath = "//android.widget.EditText[@password='true']")
+    @FindBy(xpath = "//android.widget.EditText[@text=\"login_password_text_field\"]/android.widget.EditText")
     public WebElement passwordField;
 
-    @FindBy(xpath = "//android.widget.Button[@content-desc=\"Login\"]")
+    @FindBy(xpath = "//android.widget.Button[@content-desc=\"login_button\"]")
     public WebElement loginButton;
 
     @FindBy(xpath = "//android.widget.ImageView[@content-desc=\"Profile\n" +
@@ -54,27 +54,30 @@ public class LoginPage  extends ActionUtilities {
 
     }
 
-    public void clickLoginLink() throws IOException {
+    public void clickLoginLink() throws IOException, InterruptedException {
+        Thread.sleep(2000);
         click(loginLink);
 
     }
 
-    public void enterMobileNumber() throws IOException {
+    public void enterMobileNumber() throws IOException, InterruptedException {
+        Thread.sleep(2000);
         sendKey(mobileNumberField, ReadConfig.prop.getProperty("MobileNumber"));
-        //mobileNumberField.sendKeys("9524557835");
+       // mobileNumberField.sendKeys("9524557835");
 
     }
 
-    public void enterPassword() throws IOException {
+    public void enterPassword() throws IOException, InterruptedException {
+        Thread.sleep(2000);
         sendKey(passwordField, ReadConfig.prop.getProperty("Password"));
-        // passwordField.sendKeys("Kasthuri@09");
+       // passwordField.sendKeys("Kasthuri@09");
     }
 
     public void clickLoginButton() throws IOException {
         click(loginButton);
     }
 
-    public void notificationFunction() throws IOException {
+    public void notificationFunction() throws IOException, InterruptedException {
         try {
             if (notificationAllowButton.isDisplayed()) {
                 clickNotificationAllow();
