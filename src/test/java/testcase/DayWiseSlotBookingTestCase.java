@@ -13,11 +13,11 @@ public class DayWiseSlotBookingTestCase extends BaseClass {
 
 
     @Test
-    public void dayWiseSlotBookingTestCase() throws InterruptedException, IOException {
+    public void dayWiseSlotBookingTestCase() throws Exception {
         loginPage = new LoginPage();
         myAvailabilityPage = new MyAvailabilityPage();
 
-        loginPage.notificationFunction();
+        loginPage.clickLoginLink();
         loginPage.loginFunction();
         myAvailabilityPage.setDayWiseAvailabilityFunction();
 

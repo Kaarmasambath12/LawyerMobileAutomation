@@ -19,8 +19,8 @@ public class AndroidEmulator implements interfaceDriver{
         options.setAutomationName(AutomationName.ANDROID_UIAUTOMATOR2);  //Optional
         options.setDeviceName("EmulatorDevice");
         options.setApp(FrameworkConstants.getapkFilePath());
-        options.setAppPackage("com.example.m_lawyer");
-        options.setAppActivity("com.example.m_lawyer.MainActivity");
+        options.setAppPackage("com.mlawyer.lawyer");
+        options.setAppActivity("com.mlawyer.lawyer.MainActivity");
         options.setAppWaitActivity("*");
         options.setNoReset(false);
         options.setFullReset(false);

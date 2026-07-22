@@ -13,12 +13,14 @@ public class AddUPITestCase extends BaseClass {
 
 
     @Test
-    public void addUPITestCase() throws InterruptedException, IOException, ClassNotFoundException {
+    public void addUPITestCase() throws Exception {
         loginPage = new LoginPage();
         homePage = new HomePage();
 
-        loginPage.notificationFunction();
+        loginPage.clickNotificationAllow();
+        loginPage.clickLoginLink();
         loginPage.loginFunction();
+        loginPage.clickLoginButton();
         homePage.addUPIDetails("karthi@okicici");
     }
 

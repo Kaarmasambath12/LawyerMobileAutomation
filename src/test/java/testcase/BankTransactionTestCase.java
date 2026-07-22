@@ -13,12 +13,14 @@ public class BankTransactionTestCase extends BaseClass {
 
 
     @Test
-    public void bankTransactionTestCase() throws InterruptedException, IOException, ClassNotFoundException {
+    public void bankTransactionTestCase() throws Exception {
         loginPage = new LoginPage();
         homePage = new HomePage();
 
-        loginPage.notificationFunction();
+        loginPage.clickNotificationAllow();
+        loginPage.clickLoginLink();
         loginPage.loginFunction();
+        loginPage.clickLoginButton();
         homePage.filterTransactionAndDownloadReceipt();
     }
 

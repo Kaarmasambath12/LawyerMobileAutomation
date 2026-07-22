@@ -13,13 +13,14 @@ public class SlotBookingTestCase extends BaseClass {
 
 
     @Test
-    public void slotBookingTestCase() throws InterruptedException, IOException {
+    public void slotBookingTestCase() throws Exception {
         loginPage = new LoginPage();
         myAvailabilityPage = new MyAvailabilityPage();
 
-        loginPage.notificationFunction();
+        loginPage.clickLoginLink();
         loginPage.loginFunction();
         myAvailabilityPage.setMyAvailabilityFunction();
+        myAvailabilityPage.selectTimeSlots();
 
 
     }

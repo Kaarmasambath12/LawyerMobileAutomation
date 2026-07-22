@@ -13,10 +13,14 @@ public class LoginTestCase extends BaseClass {
 
 
     @Test
-    public void loginTestCase() throws InterruptedException, IOException {
+    public void loginTestCase() throws Exception {
         loginPage  = new LoginPage();
-        loginPage.notificationFunction();
+     //  loginPage.clickNotificationAllow();
+        loginPage.clickLoginLink();
         loginPage.loginFunction();
+        Thread.sleep(3000);
+       // loginPage.clickLoginButton();
+
       //  loginPage.logoutFunction();
     }
 

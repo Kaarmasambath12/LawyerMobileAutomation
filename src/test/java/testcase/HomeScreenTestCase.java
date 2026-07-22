@@ -13,11 +13,12 @@ public class HomeScreenTestCase extends BaseClass {
 
 
     @Test
-    public void homeScreenTestCase() throws InterruptedException, IOException, ClassNotFoundException {
+    public void homeScreenTestCase() throws Exception {
         loginPage = new LoginPage();
         homePage = new HomePage();
 
-        loginPage.notificationFunction();
+        loginPage.clickNotificationAllow();
+        loginPage.clickLoginLink();
         loginPage.loginFunction();
         homePage.clickSeeMore();
         homePage.selectWeekFour();

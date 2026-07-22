@@ -13,12 +13,14 @@ public class ConsultationVideoButtonStateTestCase extends BaseClass {
 
 
     @Test
-    public void consultationVideoButtonStateTestCase() throws InterruptedException, IOException {
+    public void consultationVideoButtonStateTestCase() throws Exception {
         loginPage = new LoginPage();
         consultationsPage = new ConsultationsPage();
 
-        loginPage.notificationFunction();
+        loginPage.clickNotificationAllow();
+        loginPage.clickLoginLink();
         loginPage.loginFunction();
+        loginPage.clickLoginButton();
         consultationsPage.clickConsultationAndVerifyContinueIsDisabled();
     }
 

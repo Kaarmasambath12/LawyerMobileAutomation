@@ -36,28 +36,28 @@ public class HomePage extends ActionUtilities {
     @FindBy(xpath = "//android.widget.Button[@content-desc=\"my_earn_add_acc_button\"]")
     public WebElement addBankAccountButton;
 
-    @FindBy(xpath = "//android.widget.EditText[@text=\"bank_name_text_field\"]/android.widget.EditText")
-    public WebElement bankNameField;
-
-    @FindBy(xpath = "//android.widget.EditText[@text=\"account_holder_text_field\"]/android.widget.EditText")
+    @FindBy(xpath = "//android.widget.EditText[@resource-id=\"account_holder_text_field\"]")
     public WebElement accountHolderNameField;
 
-    @FindBy(xpath = "//android.widget.EditText[@text=\"account_number_field\"]/android.widget.EditText")
+    @FindBy(xpath = "//android.widget.EditText[@resource-id=\"bank_name_text_field\"]")
+    public WebElement bankNameField;
+
+    @FindBy(xpath = "//android.widget.EditText[@resource-id=\"account_number_field\"]")
     public WebElement accountNumberField;
 
-    @FindBy(xpath = "//android.widget.EditText[@text=\"confirm_account_field\"]/android.widget.EditText")
+    @FindBy(xpath = "//android.widget.EditText[@resource-id=\"confirm_account_field\"]")
     public WebElement confirmAccountNumberField;
 
-    @FindBy(xpath = "//android.widget.EditText[@text=\"ifc_code_text_field\"]/android.widget.EditText")
+    @FindBy(xpath = "//android.widget.EditText[@resource-id=\"ifc_code_text_field\"]")
     public WebElement iFSCCodeField;
 
-    @FindBy(xpath = "//android.widget.EditText[@text=\"branch_name_text_field\"]/android.widget.EditText")
+    @FindBy(xpath = "//android.widget.EditText[@resource-id=\"branch_name_text_field\"]")
     public WebElement branchNameField;
 
-    @FindBy(xpath = "//android.widget.Button[@content-desc='select_account_type_field\nAccount Type']")
+    @FindBy(xpath = "//android.widget.EditText[@resource-id=\"branch_name_text_field\"]")
     public WebElement accountTypeField;
 
-    @FindBy(xpath = "//android.widget.Button[@content-desc=\"SAVING\"]")
+    @FindBy(xpath = "//android.widget.Button[@content-desc=\"SAVINGS\"]")
     public WebElement savingAccountDropDown;
 
     @FindBy(xpath = "//android.widget.Button[@content-desc=\"add_acount_button\"]")
@@ -66,10 +66,10 @@ public class HomePage extends ActionUtilities {
     @FindBy(xpath = "//android.widget.Button[@content-desc=\"my_earn_add_upi_button\"]")
     public WebElement addUPI;
 
-    @FindBy(xpath = "//android.widget.EditText[@text=\"upi_id_text_field\"]/android.widget.EditText")
+    @FindBy(xpath = "//android.widget.EditText[@resource-id=\"upi_id_text_field\"]")
     public WebElement UPIID;
 
-    @FindBy(xpath = "//android.widget.EditText[@text=\"confirm_upi_text_field\"]/android.widget.EditText")
+    @FindBy(xpath = "//android.widget.EditText[@resource-id=\"confirm_upi_text_field\"]")
     public WebElement confirmUPIID;
 
     @FindBy(xpath = "//android.widget.Button[@content-desc=\"add_upi_button\"]")
@@ -155,9 +155,9 @@ public class HomePage extends ActionUtilities {
 
         click(addBankAccountButton);
 
-        click(bankNameField);
-
         click(accountHolderNameField);
+
+        click(bankNameField);
 
         click(accountNumberField);
 

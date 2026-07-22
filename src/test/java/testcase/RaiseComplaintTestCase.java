@@ -3,7 +3,6 @@ package testcase;
 import base.BaseClass;
 import org.testng.annotations.Test;
 import pages.ComplaintPage;
-import pages.ConsultationsPage;
 import pages.LoginPage;
 
 import java.io.IOException;
@@ -14,11 +13,12 @@ public class RaiseComplaintTestCase extends BaseClass {
 
 
     @Test
-    public void raiseComplaintTestCase() throws InterruptedException, IOException {
+    public void raiseComplaintTestCase() throws Exception {
         loginPage = new LoginPage();
         complaintPage = new ComplaintPage();
 
-        loginPage.notificationFunction();
+        loginPage.clickNotificationAllow();
+        loginPage.clickLoginLink();
         loginPage.loginFunction();
         complaintPage.raiseComplaint("testing");
         complaintPage.isPendingComplaintDisplayed();

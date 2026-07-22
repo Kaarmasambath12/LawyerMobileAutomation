@@ -25,7 +25,7 @@ public class ListenersClass implements ITestListener, ISuiteListener {
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
-        EmailUtil.sendReport();
+       // EmailUtil.sendReport();
     }
 
     public void onTestStart(ITestResult result){

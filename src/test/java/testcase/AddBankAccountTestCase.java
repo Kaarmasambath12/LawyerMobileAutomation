@@ -14,14 +14,15 @@ public class AddBankAccountTestCase extends BaseClass {
 
 
     @Test
-    public void addBankAccountTestCase() throws InterruptedException, IOException, ClassNotFoundException {
+    public void addBankAccountTestCase() throws Exception {
         loginPage = new LoginPage();
         homePage = new HomePage();
 
-        loginPage.notificationFunction();
+        loginPage.clickLoginLink();
         loginPage.loginFunction();
-        homePage.addBankAccountDetails("test", "test", "test", "test" +
-                "test", "test");
+        homePage.addBankAccountDetails("HDFC", "Karthik",
+                "12345678912", "IDFC0000234" +
+                "test", "Chennai");
     }
 
 }

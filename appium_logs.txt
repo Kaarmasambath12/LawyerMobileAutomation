@@ -1,11 +1,98 @@
-2026-03-10 20:27:08:106 [Appium] Welcome to Appium v3.1.2
-2026-03-10 20:27:08:108 [Appium] Non-default server args:
-2026-03-10 20:27:08:109 [Appium] { address: '127.0.0.1', loglevel: 'info', sessionOverride: true }
-2026-03-10 20:27:08:109 [Appium] Attempting to load driver uiautomator2...
-2026-03-10 20:27:08:830 [Appium] Appium REST http interface listener started on http://127.0.0.1:4723
-2026-03-10 20:27:08:830 [Appium] Available drivers:
-2026-03-10 20:27:08:831 [Appium]   - uiautomator2@6.7.10 (automationName 'UiAutomator2')
-2026-03-10 20:27:08:831 [Appium] Available plugins:
-2026-03-10 20:27:08:831 [Appium]   - images@4.1.0
-2026-03-10 20:27:08:831 [Appium] No plugins activated. Use the --use-plugins flag with names of plugins to activate
-2026-03-10 20:37:09:335 [c3be9306][HTTP] --> GET /session/c3be9306-85a8-4ca9-808f-bbed7ce3a326/window/rect 
+2026-07-04 11:02:14:938 [Appium] Welcome to Appium v3.1.2
+2026-07-04 11:02:14:939 [Appium] Non-default server args:
+2026-07-04 11:02:14:940 [Appium] { address: '127.0.0.1', loglevel: 'info', sessionOverride: true }
+2026-07-04 11:02:14:941 [Appium] Attempting to load driver uiautomator2...
+2026-07-04 11:02:15:743 [Appium] Appium REST http interface listener started on http://127.0.0.1:4723
+2026-07-04 11:02:15:744 [Appium] Available drivers:
+2026-07-04 11:02:15:744 [Appium]   - uiautomator2@6.7.10 (automationName 'UiAutomator2')
+2026-07-04 11:02:15:744 [Appium] Available plugins:
+2026-07-04 11:02:15:744 [Appium]   - images@4.1.0
+2026-07-04 11:02:15:744 [Appium] No plugins activated. Use the --use-plugins flag with names of plugins to activate
+2026-07-04 11:02:15:807 [HTTP] --> GET /status 
+2026-07-04 11:02:15:812 [HTTP] <-- GET /status 200 3 ms - 110 
+2026-07-04 11:02:15:819 [HTTP] --> GET /status 
+2026-07-04 11:02:15:820 [HTTP] <-- GET /status 200 1 ms - 110 
+2026-07-04 11:02:16:881 [HTTP] --> POST /session {"capabilities":{"firstMatch":[{}],"alwaysMatch":{"appium:app":"C:\\Users\\Admin\\Downloads\\LawyerAndroidApp\\LawyerAndroidApp/src/test/resources/apkFiles/Lawyer.apk","appium:appActivity":"com.mlawyer.lawyer.MainActivity","appium:appPackage":"com.mlawyer.lawyer","appium:appWaitActivity":"*","appium:autoGrantPermissions":true,"appium:automationName":"UIAutomator2","appium:deviceName":"EmulatorDevice","appium:fullReset":false,"appium:noReset":false,"platformName":"ANDROID"}}}
+2026-07-04 11:02:16:884 [Appium] Attempting to find matching driver for automationName 'UIAutomator2' and platformName 'ANDROID'
+2026-07-04 11:02:16:885 [Appium] The 'uiautomator2' driver was installed and matched caps.
+2026-07-04 11:02:16:885 [Appium] Will require it at C:\Users\Admin\.appium\node_modules\appium-uiautomator2-driver
+2026-07-04 11:02:16:886 [AppiumDriver@ef0d] Appium v3.1.2 creating new AndroidUiautomator2Driver (v6.7.10) session
+2026-07-04 11:02:16:886 [AppiumDriver@ef0d] Checking BaseDriver versions for Appium and AndroidUiautomator2Driver
+2026-07-04 11:02:16:886 [AppiumDriver@ef0d] Appium's BaseDriver version is 10.1.2
+2026-07-04 11:02:16:886 [AppiumDriver@ef0d] AndroidUiautomator2Driver's BaseDriver version is 10.1.2
+2026-07-04 11:02:16:894 [9d5254e8][38;5;-124m[AndroidUiautomator2Driver@22fa] Session created with session id: 9d5254e8-2fb0-4a88-b065-168f583b1050
+2026-07-04 11:02:16:904 [9d5254e8][ADB] Found 2 'build-tools' folders under 'C:\Users\Admin\AppData\Local\Android\Sdk' (newest first):
+2026-07-04 11:02:16:904 [9d5254e8][ADB]     C:\Users\Admin\AppData\Local\Android\Sdk\build-tools\36.1.0
+2026-07-04 11:02:16:905 [9d5254e8][ADB]     C:\Users\Admin\AppData\Local\Android\Sdk\build-tools\35.0.0
+2026-07-04 11:02:16:905 [9d5254e8][ADB] Using 'adb.exe' from 'C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.exe'
+2026-07-04 11:02:16:926 [9d5254e8][38;5;-124m[AndroidUiautomator2Driver@22fa] Retrieving device list
+2026-07-04 11:02:16:948 [9d5254e8][38;5;-124m[AndroidUiautomator2Driver@22fa] Using device: emulator-5554
+2026-07-04 11:02:16:949 [9d5254e8][ADB] Using 'adb.exe' from 'C:\Users\Admin\AppData\Local\Android\Sdk\platform-tools\adb.exe'
+2026-07-04 11:02:16:969 [9d5254e8][BaseDriver] Using local app 'C:\Users\Admin\Downloads\LawyerAndroidApp\LawyerAndroidApp/src/test/resources/apkFiles/Lawyer.apk'
+2026-07-04 11:02:17:309 [9d5254e8][ADB] Getting device platform version
+2026-07-04 11:02:17:355 [9d5254e8][38;5;-124m[AndroidUiautomator2Driver@22fa] Relaxing hidden api policy
+2026-07-04 11:02:17:500 [9d5254e8][ADB] Using 'aapt2.exe' from 'C:\Users\Admin\AppData\Local\Android\Sdk\build-tools\36.1.0\aapt2.exe'
+2026-07-04 11:02:17:848 [9d5254e8][38;5;-124m[AndroidUiautomator2Driver@22fa] Server packages are not going to be (re)installed
+2026-07-04 11:02:17:921 [9d5254e8][ADB] Adding packages ["io.appium.settings","io.appium.uiautomator2.server","io.appium.uiautomator2.server.test"] to Doze whitelist
+2026-07-04 11:02:18:361 [9d5254e8][ADB] Using 'apksigner.jar' from 'C:\Users\Admin\AppData\Local\Android\Sdk\build-tools\36.1.0\lib\apksigner.jar'
+2026-07-04 11:02:20:211 [9d5254e8][ADB] 'C:\Users\Admin\Downloads\LawyerAndroidApp\LawyerAndroidApp/src/test/resources/apkFiles/Lawyer.apk' is signed with a non-default certificate
+2026-07-04 11:02:20:286 [9d5254e8][38;5;-124m[AndroidUiautomator2Driver@22fa] Performing fast reset on 'com.mlawyer.lawyer'
+2026-07-04 11:02:20:882 [9d5254e8][38;5;-124m[AndroidUiautomator2Driver@22fa] Starting UIAutomator2 server 9.10.0
+2026-07-04 11:02:20:882 [9d5254e8][38;5;-124m[AndroidUiautomator2Driver@22fa] Using UIAutomator2 server from 'C:\Users\Admin\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-uiautomator2-server\apks\appium-uiautomator2-server-v9.10.0.apk' and test from 'C:\Users\Admin\.appium\node_modules\appium-uiautomator2-driver\node_modules\appium-uiautomator2-server\apks\appium-uiautomator2-server-debug-androidTest.apk'
+2026-07-04 11:02:20:882 [9d5254e8][38;5;-124m[AndroidUiautomator2Driver@22fa] Waiting up to 30000ms for UiAutomator2 to be online...
+2026-07-04 11:02:20:930 [9d5254e8][38;5;-124m[AndroidUiautomator2Driver@22fa] socket hang up
+2026-07-04 11:02:21:945 [9d5254e8][38;5;-124m[AndroidUiautomator2Driver@22fa] socket hang up
+2026-07-04 11:02:23:078 [9d5254e8][38;5;-124m[AndroidUiautomator2Driver@22fa] Determined the downstream protocol as 'W3C'
+2026-07-04 11:02:23:172 [9d5254e8][38;5;-124m[AndroidUiautomator2Driver@22fa] Screen already unlocked, doing nothing
+2026-07-04 11:02:23:173 [9d5254e8][38;5;-124m[AndroidUiautomator2Driver@22fa] Starting 'com.mlawyer.lawyer/com.mlawyer.lawyer.MainActivity' and waiting for 'com.mlawyer.lawyer/*'
+2026-07-04 11:02:28:416 [9d5254e8][AppiumDriver@ef0d] New AndroidUiautomator2Driver session created successfully, session 9d5254e8-2fb0-4a88-b065-168f583b1050 added to master session list
+2026-07-04 11:02:28:420 [9d5254e8][HTTP] <-- POST /session 200 11537 ms - 1312 
+2026-07-04 11:02:28:516 [9d5254e8][HTTP] --> POST /session/9d5254e8-2fb0-4a88-b065-168f583b1050/appium/start_recording_screen {}
+2026-07-04 11:02:28:677 [9d5254e8][38;5;-124m[AndroidUiautomator2Driver@22fa] Screen recording has not been previously started by Appium. There is nothing to stop
+2026-07-04 11:02:29:207 [9d5254e8][HTTP] <-- POST /session/9d5254e8-2fb0-4a88-b065-168f583b1050/appium/start_recording_screen 200 691 ms - 12 
+2026-07-04 11:02:30:161 [9d5254e8][HTTP] --> GET /session/9d5254e8-2fb0-4a88-b065-168f583b1050/context 
+2026-07-04 11:02:30:164 [9d5254e8][HTTP] <-- GET /session/9d5254e8-2fb0-4a88-b065-168f583b1050/context 200 3 ms - 22 
+2026-07-04 11:02:30:174 [9d5254e8][HTTP] --> POST /session/9d5254e8-2fb0-4a88-b065-168f583b1050/element {"using":"xpath","value":"//*[@resource-id='bottom_login_icon']"}
+2026-07-04 11:02:30:893 [9d5254e8][38;5;-124m[AndroidUiautomator2Driver@22fa] Got response with status 404: {"sessionId":"dd4e3076-2fde-4f39-b2d6-274bba7e03d9","value":{"error":"no such element","message":"An element could not be located on the page using the given search parameters","stacktrace":"io.appium.uiautomator2.common.exceptions.ElementNotFoundException: An element could not be located on the page using the given search parameters\n\tat io.appium.uiautomator2.utils.ElementLocationHelpers.findElement(ElementLocationHelpers.java:153)\n\tat io.appium.uiautomator2.handler.FindElement.safeHandle(FindElement.java:60)\n\tat io.appium.uiautomator2.handler.request.SafeRequestHandler.handle(SafeRequestHandler.java:59)\n\tat io.appium.uiautomator2.server.AppiumServlet.handleRequest(AppiumServlet.java:267)\n\tat io.appium.uiautomator2.server.AppiumServlet.handleHttpRequest(AppiumServlet.java:261)\n\tat io.appium.uiautomator2.http.ServerHandler.channelRead(ServerHandler.java:77)\n\tat io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:356)\n\tat io.netty.handler.codec.M...
+2026-07-04 11:02:30:896 [9d5254e8][HTTP] <-- POST /session/9d5254e8-2fb0-4a88-b065-168f583b1050/element 404 722 ms - 891 
+2026-07-04 11:02:31:427 [9d5254e8][HTTP] --> POST /session/9d5254e8-2fb0-4a88-b065-168f583b1050/element {"using":"xpath","value":"//*[@resource-id='bottom_login_icon']"}
+2026-07-04 11:02:31:487 [9d5254e8][38;5;-124m[AndroidUiautomator2Driver@22fa] Got response with status 404: {"sessionId":"dd4e3076-2fde-4f39-b2d6-274bba7e03d9","value":{"error":"no such element","message":"An element could not be located on the page using the given search parameters","stacktrace":"io.appium.uiautomator2.common.exceptions.ElementNotFoundException: An element could not be located on the page using the given search parameters\n\tat io.appium.uiautomator2.utils.ElementLocationHelpers.findElement(ElementLocationHelpers.java:153)\n\tat io.appium.uiautomator2.handler.FindElement.safeHandle(FindElement.java:60)\n\tat io.appium.uiautomator2.handler.request.SafeRequestHandler.handle(SafeRequestHandler.java:59)\n\tat io.appium.uiautomator2.server.AppiumServlet.handleRequest(AppiumServlet.java:267)\n\tat io.appium.uiautomator2.server.AppiumServlet.handleHttpRequest(AppiumServlet.java:261)\n\tat io.appium.uiautomator2.http.ServerHandler.channelRead(ServerHandler.java:77)\n\tat io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:356)\n\tat io.netty.handler.codec.M...
+2026-07-04 11:02:31:490 [9d5254e8][HTTP] <-- POST /session/9d5254e8-2fb0-4a88-b065-168f583b1050/element 404 63 ms - 891 
+2026-07-04 11:02:32:001 [9d5254e8][HTTP] --> GET /session/9d5254e8-2fb0-4a88-b065-168f583b1050/context 
+2026-07-04 11:02:32:003 [9d5254e8][HTTP] <-- GET /session/9d5254e8-2fb0-4a88-b065-168f583b1050/context 200 2 ms - 22 
+2026-07-04 11:02:32:010 [9d5254e8][HTTP] --> POST /session/9d5254e8-2fb0-4a88-b065-168f583b1050/element {"using":"xpath","value":"//*[@resource-id='bottom_login_icon']"}
+2026-07-04 11:02:32:057 [9d5254e8][38;5;-124m[AndroidUiautomator2Driver@22fa] Got response with status 404: {"sessionId":"dd4e3076-2fde-4f39-b2d6-274bba7e03d9","value":{"error":"no such element","message":"An element could not be located on the page using the given search parameters","stacktrace":"io.appium.uiautomator2.common.exceptions.ElementNotFoundException: An element could not be located on the page using the given search parameters\n\tat io.appium.uiautomator2.utils.ElementLocationHelpers.findElement(ElementLocationHelpers.java:153)\n\tat io.appium.uiautomator2.handler.FindElement.safeHandle(FindElement.java:60)\n\tat io.appium.uiautomator2.handler.request.SafeRequestHandler.handle(SafeRequestHandler.java:59)\n\tat io.appium.uiautomator2.server.AppiumServlet.handleRequest(AppiumServlet.java:267)\n\tat io.appium.uiautomator2.server.AppiumServlet.handleHttpRequest(AppiumServlet.java:261)\n\tat io.appium.uiautomator2.http.ServerHandler.channelRead(ServerHandler.java:77)\n\tat io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:356)\n\tat io.netty.handler.codec.M...
+2026-07-04 11:02:32:060 [9d5254e8][HTTP] <-- POST /session/9d5254e8-2fb0-4a88-b065-168f583b1050/element 404 50 ms - 891 
+2026-07-04 11:02:32:579 [9d5254e8][HTTP] --> POST /session/9d5254e8-2fb0-4a88-b065-168f583b1050/element {"using":"xpath","value":"//*[@resource-id='bottom_login_icon']"}
+2026-07-04 11:02:32:632 [9d5254e8][38;5;-124m[AndroidUiautomator2Driver@22fa] Got response with status 404: {"sessionId":"dd4e3076-2fde-4f39-b2d6-274bba7e03d9","value":{"error":"no such element","message":"An element could not be located on the page using the given search parameters","stacktrace":"io.appium.uiautomator2.common.exceptions.ElementNotFoundException: An element could not be located on the page using the given search parameters\n\tat io.appium.uiautomator2.utils.ElementLocationHelpers.findElement(ElementLocationHelpers.java:153)\n\tat io.appium.uiautomator2.handler.FindElement.safeHandle(FindElement.java:60)\n\tat io.appium.uiautomator2.handler.request.SafeRequestHandler.handle(SafeRequestHandler.java:59)\n\tat io.appium.uiautomator2.server.AppiumServlet.handleRequest(AppiumServlet.java:267)\n\tat io.appium.uiautomator2.server.AppiumServlet.handleHttpRequest(AppiumServlet.java:261)\n\tat io.appium.uiautomator2.http.ServerHandler.channelRead(ServerHandler.java:77)\n\tat io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:356)\n\tat io.netty.handler.codec.M...
+2026-07-04 11:02:32:637 [9d5254e8][HTTP] <-- POST /session/9d5254e8-2fb0-4a88-b065-168f583b1050/element 404 57 ms - 891 
+2026-07-04 11:02:33:158 [9d5254e8][HTTP] --> POST /session/9d5254e8-2fb0-4a88-b065-168f583b1050/element {"using":"xpath","value":"//*[@resource-id='bottom_login_icon']"}
+2026-07-04 11:02:33:288 [9d5254e8][38;5;-124m[AndroidUiautomator2Driver@22fa] Got response with status 404: {"sessionId":"dd4e3076-2fde-4f39-b2d6-274bba7e03d9","value":{"error":"no such element","message":"An element could not be located on the page using the given search parameters","stacktrace":"io.appium.uiautomator2.common.exceptions.ElementNotFoundException: An element could not be located on the page using the given search parameters\n\tat io.appium.uiautomator2.utils.ElementLocationHelpers.findElement(ElementLocationHelpers.java:153)\n\tat io.appium.uiautomator2.handler.FindElement.safeHandle(FindElement.java:60)\n\tat io.appium.uiautomator2.handler.request.SafeRequestHandler.handle(SafeRequestHandler.java:59)\n\tat io.appium.uiautomator2.server.AppiumServlet.handleRequest(AppiumServlet.java:267)\n\tat io.appium.uiautomator2.server.AppiumServlet.handleHttpRequest(AppiumServlet.java:261)\n\tat io.appium.uiautomator2.http.ServerHandler.channelRead(ServerHandler.java:77)\n\tat io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:356)\n\tat io.netty.handler.codec.M...
+2026-07-04 11:02:33:291 [9d5254e8][HTTP] <-- POST /session/9d5254e8-2fb0-4a88-b065-168f583b1050/element 404 132 ms - 891 
+2026-07-04 11:02:33:814 [9d5254e8][HTTP] --> GET /session/9d5254e8-2fb0-4a88-b065-168f583b1050/context 
+2026-07-04 11:02:33:816 [9d5254e8][HTTP] <-- GET /session/9d5254e8-2fb0-4a88-b065-168f583b1050/context 200 2 ms - 22 
+2026-07-04 11:02:33:821 [9d5254e8][HTTP] --> POST /session/9d5254e8-2fb0-4a88-b065-168f583b1050/element {"using":"xpath","value":"//*[@resource-id='bottom_login_icon']"}
+2026-07-04 11:02:33:946 [9d5254e8][38;5;-124m[AndroidUiautomator2Driver@22fa] Got response with status 404: {"sessionId":"dd4e3076-2fde-4f39-b2d6-274bba7e03d9","value":{"error":"no such element","message":"An element could not be located on the page using the given search parameters","stacktrace":"io.appium.uiautomator2.common.exceptions.ElementNotFoundException: An element could not be located on the page using the given search parameters\n\tat io.appium.uiautomator2.utils.ElementLocationHelpers.findElement(ElementLocationHelpers.java:153)\n\tat io.appium.uiautomator2.handler.FindElement.safeHandle(FindElement.java:60)\n\tat io.appium.uiautomator2.handler.request.SafeRequestHandler.handle(SafeRequestHandler.java:59)\n\tat io.appium.uiautomator2.server.AppiumServlet.handleRequest(AppiumServlet.java:267)\n\tat io.appium.uiautomator2.server.AppiumServlet.handleHttpRequest(AppiumServlet.java:261)\n\tat io.appium.uiautomator2.http.ServerHandler.channelRead(ServerHandler.java:77)\n\tat io.netty.channel.AbstractChannelHandlerContext.fireChannelRead(AbstractChannelHandlerContext.java:356)\n\tat io.netty.handler.codec.M...
+2026-07-04 11:02:33:949 [9d5254e8][HTTP] <-- POST /session/9d5254e8-2fb0-4a88-b065-168f583b1050/element 404 127 ms - 891 
+2026-07-04 11:02:34:464 [9d5254e8][HTTP] --> POST /session/9d5254e8-2fb0-4a88-b065-168f583b1050/element {"using":"xpath","value":"//*[@resource-id='bottom_login_icon']"}
+2026-07-04 11:02:34:750 [9d5254e8][HTTP] <-- POST /session/9d5254e8-2fb0-4a88-b065-168f583b1050/element 200 286 ms - 137 
+2026-07-04 11:02:34:754 [9d5254e8][HTTP] --> GET /session/9d5254e8-2fb0-4a88-b065-168f583b1050/element/00000000-0000-0042-0000-000f00000003/displayed 
+2026-07-04 11:02:34:768 [9d5254e8][HTTP] <-- GET /session/9d5254e8-2fb0-4a88-b065-168f583b1050/element/00000000-0000-0042-0000-000f00000003/displayed 200 14 ms - 14 
+2026-07-04 11:02:34:772 [9d5254e8][HTTP] --> GET /session/9d5254e8-2fb0-4a88-b065-168f583b1050/context 
+2026-07-04 11:02:34:772 [9d5254e8][HTTP] <-- GET /session/9d5254e8-2fb0-4a88-b065-168f583b1050/context 200 1 ms - 22 
+2026-07-04 11:02:34:775 [9d5254e8][HTTP] --> POST /session/9d5254e8-2fb0-4a88-b065-168f583b1050/element {"using":"xpath","value":"//*[@resource-id='bottom_login_icon']"}
+2026-07-04 11:02:34:812 [9d5254e8][HTTP] <-- POST /session/9d5254e8-2fb0-4a88-b065-168f583b1050/element 200 37 ms - 137 
+2026-07-04 11:02:34:814 [9d5254e8][HTTP] --> GET /session/9d5254e8-2fb0-4a88-b065-168f583b1050/element/00000000-0000-0042-0000-000f00000003/enabled 
+2026-07-04 11:02:34:822 [9d5254e8][HTTP] <-- GET /session/9d5254e8-2fb0-4a88-b065-168f583b1050/element/00000000-0000-0042-0000-000f00000003/enabled 200 8 ms - 14 
+2026-07-04 11:02:34:827 [9d5254e8][HTTP] --> GET /session/9d5254e8-2fb0-4a88-b065-168f583b1050/context 
+2026-07-04 11:02:34:827 [9d5254e8][HTTP] <-- GET /session/9d5254e8-2fb0-4a88-b065-168f583b1050/context 200 1 ms - 22 
+2026-07-04 11:02:34:829 [9d5254e8][HTTP] --> POST /session/9d5254e8-2fb0-4a88-b065-168f583b1050/element {"using":"xpath","value":"//*[@resource-id='bottom_login_icon']"}
+2026-07-04 11:02:34:854 [9d5254e8][HTTP] <-- POST /session/9d5254e8-2fb0-4a88-b065-168f583b1050/element 200 25 ms - 137 
+2026-07-04 11:02:34:857 [9d5254e8][HTTP] --> POST /session/9d5254e8-2fb0-4a88-b065-168f583b1050/element/00000000-0000-0042-0000-000f00000003/click {"id":"00000000-0000-0042-0000-000f00000003"}
+2026-07-04 11:02:35:718 [9d5254e8][HTTP] <-- POST /session/9d5254e8-2fb0-4a88-b065-168f583b1050/element/00000000-0000-0042-0000-000f00000003/click 200 860 ms - 14 
+2026-07-04 11:02:48:809 [9d5254e8][HTTP] --> POST /session/9d5254e8-2fb0-4a88-b065-168f583b1050/appium/stop_recording_screen {}
+2026-07-04 11:02:50:040 [9d5254e8][HTTP] <-- POST /session/9d5254e8-2fb0-4a88-b065-168f583b1050/appium/stop_recording_screen 200 1226 ms - 7013960 
+2026-07-04 11:02:50:318 [9d5254e8][HTTP] --> DELETE /session/9d5254e8-2fb0-4a88-b065-168f583b1050 
+2026-07-04 11:02:50:320 [9d5254e8][AppiumDriver@ef0d] Removing session 9d5254e8-2fb0-4a88-b065-168f583b1050 from our master session list
+2026-07-04 11:02:50:736 [9d5254e8][38;5;-124m[AndroidUiautomator2Driver@22fa] Restoring hidden api policy to the device default configuration
+2026-07-04 11:02:50:980 [9d5254e8][HTTP] <-- DELETE /session/9d5254e8-2fb0-4a88-b065-168f583b1050 200 662 ms - 14 

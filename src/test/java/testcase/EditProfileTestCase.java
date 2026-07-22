@@ -18,12 +18,14 @@ public class EditProfileTestCase extends BaseClass {
 
 
     @Test
-    public void editProfileTestCase() throws InterruptedException, IOException, ClassNotFoundException {
+    public void editProfileTestCase() throws Exception {
         loginPage = new LoginPage();
         profilePage = new ProfilePage();
 
-        loginPage.notificationFunction();
+        loginPage.clickNotificationAllow();
+        loginPage.clickLoginLink();
         loginPage.loginFunction();
+        loginPage.clickLoginButton();
         profilePage.openProfile();
         profilePage.enterNameDetails("Kumar", "V");
         profilePage.enterAddressDetails(

@@ -13,12 +13,14 @@ public class ConsultationCompleteAndCancelledCheckTestCase extends BaseClass {
 
 
     @Test
-    public void consultationCompleteAndCancelledCheckTestCase() throws InterruptedException, IOException {
+    public void consultationCompleteAndCancelledCheckTestCase() throws Exception {
         loginPage = new LoginPage();
         consultationsPage = new ConsultationsPage();
 
-        loginPage.notificationFunction();
+        loginPage.clickNotificationAllow();
+        loginPage.clickLoginLink();
         loginPage.loginFunction();
+        loginPage.clickLoginButton();
         consultationsPage.verifyCompletedAndCancelledMeetData();
     }
 

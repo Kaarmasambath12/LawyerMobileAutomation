@@ -9,6 +9,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import utilities.ADBUtil;
 import utilities.ActionUtilities;
 
 import java.io.IOException;
@@ -18,6 +19,10 @@ import java.time.Duration;
 public class LoginPage  extends ActionUtilities {
     String text = "Logout";
 
+    WebDriverWait wait = new WebDriverWait(
+            DriverThreadManager.getDriver(),
+            Duration.ofSeconds(20));
+
     public LoginPage() {
 
         PageFactory.initElements(new AppiumFieldDecorator(DriverThreadManager.getDriver()), this);
@@ -26,16 +31,16 @@ public class LoginPage  extends ActionUtilities {
     @FindBy(id = "com.android.permissioncontroller:id/permission_allow_button")
     public WebElement notificationAllowButton;
 
-    @FindBy(xpath = "//android.widget.Button[@content-desc=\"bottom_login_icon\"]")
+    @FindBy(xpath = "//*[@resource-id='bottom_login_icon']")
     public WebElement loginLink;
 
-    @FindBy(xpath = "//android.widget.EditText[@text=\"mobile_number_text_field\"]/android.widget.EditText")
+    @FindBy(xpath = "//*[@resource-id='mobile_number_textfield']")
     public WebElement mobileNumberField;
 
-    @FindBy(xpath = "//android.widget.EditText[@text=\"login_password_text_field\"]/android.widget.EditText")
+    @FindBy(xpath = "//*[@resource-id='login_password_text_field']")
     public WebElement passwordField;
 
-    @FindBy(xpath = "//android.widget.Button[@content-desc=\"login_button\"]")
+    @FindBy(xpath = "//*[@resource-id='login_button']")
     public WebElement loginButton;
 
     @FindBy(xpath = "//android.widget.ImageView[@content-desc=\"Profile\n" +
@@ -50,87 +55,42 @@ public class LoginPage  extends ActionUtilities {
 
 
     public void clickNotificationAllow() throws IOException {
-        click(notificationAllowButton);
-
-    }
-
-    public void clickLoginLink() throws IOException, InterruptedException {
-        Thread.sleep(2000);
-        click(loginLink);
-
-    }
-
-    public void enterMobileNumber() throws IOException, InterruptedException {
-        Thread.sleep(2000);
-        sendKey(mobileNumberField, ReadConfig.prop.getProperty("MobileNumber"));
-       // mobileNumberField.sendKeys("9524557835");
-
-    }
-
-    public void enterPassword() throws IOException, InterruptedException {
-        Thread.sleep(2000);
-        sendKey(passwordField, ReadConfig.prop.getProperty("Password"));
-       // passwordField.sendKeys("Kasthuri@09");
-    }
-
-    public void clickLoginButton() throws IOException {
-        click(loginButton);
-    }
-
-    public void notificationFunction() throws IOException, InterruptedException {
-        try {
-            if (notificationAllowButton.isDisplayed()) {
-                clickNotificationAllow();
-            }
-        } catch (Exception e) {
-            clickLoginLink();
+        if (notificationAllowButton.isDisplayed()) {
+            click(notificationAllowButton);
         }
     }
 
-
-    // ===== Complete Login Flow =====
-
-    public void loginFunction() throws IOException, InterruptedException {
-        click(mobileNumberField);
-        enterMobileNumber();
-        click(passwordField);
-        enterPassword();
-        closeKeyboard();
-        Thread.sleep(2000);
-        clickLoginButton();
+    public void clickLoginLink() throws IOException {
+        wait.until(ExpectedConditions.elementToBeClickable(loginLink));
+        click(loginLink);
     }
 
-    public void loginFunctionWithTestData(String mobileNumber, String password) throws IOException, InterruptedException {
-        Thread.sleep(2000);
-        click(mobileNumberField);
-        mobileNumberField.clear();
-        mobileNumberField.sendKeys(mobileNumber);
-        Thread.sleep(2000);
-        click(passwordField);
-        passwordField.clear();
-        passwordField.sendKeys(password);
+    public void loginFunction() throws Exception {
 
-        closeKeyboard();
+        // Mobile field
+        ADBUtil.tap(540, 1015);
+        ADBUtil.typeText("9003349787");
 
-        clickLoginButton();
+        Thread.sleep(1000);
+
+        // Password field
+        ADBUtil.tap(540, 1210);
+        ADBUtil.tap(540, 1210);
+
+        ADBUtil.typeText("Skarthi");
+        ADBUtil.pressKeyCode(77); // @
+        ADBUtil.typeText("3031");
+
+        Thread.sleep(1000);
+
+        // Login button
+        ADBUtil.tap(540, 1500);
     }
 
-    public void logoutFunction() throws IOException, InterruptedException {
-       /* click(profileIcon);
-        scrollToText("Logout");
-        click(logoutButton);
-        click(confirmButton);
-*/
-
-        click(profileIcon);
-
-        WebDriverWait wait = new WebDriverWait(DriverThreadManager.getDriver(), Duration.ofSeconds(15));
-        System.out.println("scroll started");
-
-        // Scroll until Logout is visible
-        scrollToText(text);
-        System.out.println("scroll stopped");
-        wait.until(ExpectedConditions.elementToBeClickable(confirmButton)).click();
+    public void clickLoginButton() throws IOException {
+        wait.until(ExpectedConditions.elementToBeClickable(loginButton));
+        click(loginButton);
     }
+
 
 }
