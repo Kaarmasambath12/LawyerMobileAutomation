@@ -12,6 +12,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import utilities.ActionUtilities;
+import utilities.ADBUtil;
 
 
 
@@ -172,6 +173,53 @@ public class HomePage extends ActionUtilities {
         click(savingAccountDropDown);
 
         click(addBankAccount);
+    }
+
+    public void addAccountFunction() throws Exception {
+
+        // Account Holder Name
+       // ADBUtil.tap(540, 450);
+        click(addBankButton);
+        Thread.sleep(2000);
+        click(addBankAccountButton);
+        Thread.sleep(2000);
+        ADBUtil.typeText("Karthikeyan");
+
+        // Bank Name
+        ADBUtil.tap(540, 635);
+        ADBUtil.typeText("HDFC Bank");
+
+        // Account Number
+        ADBUtil.tap(540, 825);
+        ADBUtil.typeText("123456789012");
+
+        // Confirm Account Number
+        ADBUtil.tap(540, 1015);
+        ADBUtil.typeText("123456789012");
+
+        // IFSC Code
+        ADBUtil.tap(540, 1205);
+        ADBUtil.typeText("HDFC0001234");
+
+        // Branch Name
+        ADBUtil.tap(540, 1395);
+        ADBUtil.typeText("Bangalore");
+
+        // Account Type
+        ADBUtil.tap(540, 1595);
+
+        // Select Account Type
+        // Example: Savings
+        click(savingAccountDropDown);
+
+        // Set As Primary Account
+        ADBUtil.tap(80, 1735);
+
+        // Verification checkbox
+        ADBUtil.tap(80, 1830);
+
+        // Add Account
+        ADBUtil.tap(540, 2080);
     }
 
 

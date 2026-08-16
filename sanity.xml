@@ -8,7 +8,7 @@
     <test name="LawyerUIAutomation">
         <classes>
       <!--      <class name="testcase.LoginTestCase"/>-->
-            <class name="testcase.LoginTestCase"/>
+            <class name="testcase.AddBankAccountTestCase"/>
         </classes>
     </test>
 </suite>

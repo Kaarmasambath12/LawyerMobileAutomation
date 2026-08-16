@@ -31,16 +31,16 @@ public class LoginPage  extends ActionUtilities {
     @FindBy(id = "com.android.permissioncontroller:id/permission_allow_button")
     public WebElement notificationAllowButton;
 
-    @FindBy(xpath = "//*[@resource-id='bottom_login_icon']")
+    @FindBy(xpath = "//android.widget.Button[@content-desc=\"bottom_login_icon\"]")
     public WebElement loginLink;
 
-    @FindBy(xpath = "//*[@resource-id='mobile_number_textfield']")
+    @FindBy(xpath = "//android.widget.EditText[@resource-id=\"mobile_number_textfield\"]")
     public WebElement mobileNumberField;
 
-    @FindBy(xpath = "//*[@resource-id='login_password_text_field']")
+    @FindBy(xpath = "//android.widget.EditText[@resource-id=\"login_password_text_field\"]")
     public WebElement passwordField;
 
-    @FindBy(xpath = "//*[@resource-id='login_button']")
+    @FindBy(xpath = "//android.widget.Button[@content-desc=\"login_button\"]")
     public WebElement loginButton;
 
     @FindBy(xpath = "//android.widget.ImageView[@content-desc=\"Profile\n" +
@@ -84,7 +84,9 @@ public class LoginPage  extends ActionUtilities {
         Thread.sleep(1000);
 
         // Login button
-        ADBUtil.tap(540, 1500);
+       // ADBUtil.tap(540, 1500);
+        hideKeyboardIfDisplayed();
+        click(loginButton);
     }
 
     public void clickLoginButton() throws IOException {
