@@ -5,13 +5,17 @@
         <listener class-name="listeners.ListenersClass"/>
        <!-- <listener class-name="listeners.AnnotationTransformer"/>-->
     </listeners>
+    <test name="RegisterTests">
+        <classes>
+            <class name="LawyerTestcase.RegisterTestCase"/>
+        </classes>
+    </test>
+
     <test name="LawyerUIAutomation">
         <classes>
-            <class name="testcase.LoginTestCase"/>
-            <class name="testcase.SlotBookingTestCase"/>
-            <class name="testcase.DayWiseSlotBookingTestCase"/>
-            <class name="testcase.EditDateWiseSlotBookingTestCase"/>
-            <class name="testcase.EditDayWiseSlotBookingTestCase"/>
+            <class name="LawyerTestcase.LoginTestCase"/>
+            <class name="LawyerTestcase.SlotBookingTestCase"/>
+            <class name="LawyerTestcase.DayWiseSlotBookingTestCase"/>
         </classes>
     </test>
 </suite>

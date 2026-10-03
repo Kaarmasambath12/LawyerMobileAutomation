@@ -1,4 +1,4 @@
-package pages;
+package lawyerPages;
 
 import Device.DriverThreadManager;
 import io.appium.java_client.pagefactory.AndroidFindBy;
@@ -11,7 +11,6 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import utilities.ActionUtilities;
 
 import java.io.IOException;
-import java.security.cert.X509Certificate;
 import java.time.Duration;
 
 public class ConsultationsPage extends ActionUtilities {

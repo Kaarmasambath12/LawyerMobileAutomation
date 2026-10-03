@@ -1,12 +1,9 @@
-package testcase;
+package LawyerTestcase;
 
 import base.BaseClass;
 import org.testng.annotations.Test;
-import pages.HomePage;
-import pages.LoginPage;
-import pages.ProfilePage;
-
-import java.io.IOException;
+import lawyerPages.LoginPage;
+import lawyerPages.ProfilePage;
 
 import static utilities.ActionUtilities.scrollToText;
 

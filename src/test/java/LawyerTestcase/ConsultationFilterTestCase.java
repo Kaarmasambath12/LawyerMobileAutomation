@@ -1,11 +1,9 @@
-package testcase;
+package LawyerTestcase;
 
 import base.BaseClass;
 import org.testng.annotations.Test;
-import pages.ConsultationsPage;
-import pages.LoginPage;
-
-import java.io.IOException;
+import lawyerPages.ConsultationsPage;
+import lawyerPages.LoginPage;
 
 public class ConsultationFilterTestCase extends BaseClass {
     public LoginPage loginPage;

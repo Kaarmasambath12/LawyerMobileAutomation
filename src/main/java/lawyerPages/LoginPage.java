@@ -1,15 +1,16 @@
-package pages;
+package lawyerPages;
 
 import Device.DriverThreadManager;
-import config.ReadConfig;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import utilities.ADBUtil;
+import utilities.ADBLoginUtil;
 import utilities.ActionUtilities;
 
 import java.io.IOException;
@@ -66,28 +67,10 @@ public class LoginPage  extends ActionUtilities {
     }
 
     public void loginFunction() throws Exception {
-
-        // Mobile field
-        ADBUtil.tap(540, 1015);
-        ADBUtil.typeText("9003349787");
-
-        Thread.sleep(1000);
-
-        // Password field
-        ADBUtil.tap(540, 1210);
-        ADBUtil.tap(540, 1210);
-
-        ADBUtil.typeText("Skarthi");
-        ADBUtil.pressKeyCode(77); // @
-        ADBUtil.typeText("3031");
-
-        Thread.sleep(1000);
-
-        // Login button
-       // ADBUtil.tap(540, 1500);
-        hideKeyboardIfDisplayed();
-        click(loginButton);
+        // Use direct ADB login utility with WebElement locator for login button
+        ADBLoginUtil.performLogin("9003349787", "Skarthi@3031");
     }
+
 
     public void clickLoginButton() throws IOException {
         wait.until(ExpectedConditions.elementToBeClickable(loginButton));

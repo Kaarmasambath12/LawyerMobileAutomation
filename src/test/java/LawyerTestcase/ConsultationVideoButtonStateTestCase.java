@@ -1,19 +1,17 @@
-package testcase;
+package LawyerTestcase;
 
 import base.BaseClass;
 import org.testng.annotations.Test;
-import pages.ConsultationsPage;
-import pages.LoginPage;
+import lawyerPages.ConsultationsPage;
+import lawyerPages.LoginPage;
 
-import java.io.IOException;
-
-public class ConsultationCancellationTestCase extends BaseClass {
+public class ConsultationVideoButtonStateTestCase extends BaseClass {
     public LoginPage loginPage;
     public ConsultationsPage consultationsPage;
 
 
     @Test
-    public void consultationCancellationTestCase() throws Exception {
+    public void consultationVideoButtonStateTestCase() throws Exception {
         loginPage = new LoginPage();
         consultationsPage = new ConsultationsPage();
 
@@ -21,7 +19,7 @@ public class ConsultationCancellationTestCase extends BaseClass {
         loginPage.clickLoginLink();
         loginPage.loginFunction();
         loginPage.clickLoginButton();
-        consultationsPage.cancelConsultationFunction();
+        consultationsPage.clickConsultationAndVerifyContinueIsDisabled();
     }
 
 }

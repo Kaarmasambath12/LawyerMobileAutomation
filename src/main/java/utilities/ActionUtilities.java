@@ -13,6 +13,9 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.android.nativekey.AndroidKey;
+import io.appium.java_client.android.nativekey.KeyEvent;
 
 import java.io.IOException;
 import java.net.HttpURLConnection;
@@ -44,6 +47,10 @@ public class ActionUtilities {
     }
 
     public void sendKey(WebElement element, String value) throws IOException {
+        sendKeyWithRetry(element, value, 3);
+    }
+
+    public void sendKeyWithRetry(WebElement element, String value, int maxAttempts) throws IOException {
         new FluentWait<>(DriverThreadManager.getDriver())
                 .withTimeout(Duration.ofSeconds(FrameworkConstants.getPageLoadTimeOut()))
                 .pollingEvery(Duration.ofSeconds(FrameworkConstants.getExplicitWait()))
@@ -51,9 +58,38 @@ public class ActionUtilities {
                 .ignoring(ElementClickInterceptedException.class)
                 .ignoring(StaleElementReferenceException.class)
                 .until((Function<WebDriver, Object>) driver -> {
-                    element.clear();
-                    element.sendKeys(value);
-                    return true;
+                    try {
+                        // Step 1: Click to focus the field
+                        element.click();
+                        Thread.sleep(200);
+
+                        // Step 2: Clear existing text using select all + delete
+                        element.clear();
+                        Thread.sleep(100);
+
+                        // Step 3: Triple-tap to select all and delete (Android-specific)
+                        element.sendKeys(Keys.chord(Keys.CONTROL, "a"));
+                        Thread.sleep(50);
+                        element.sendKeys(Keys.DELETE);
+                        Thread.sleep(100);
+
+                        // Step 4: Enter new text
+                        element.sendKeys(value);
+                        Thread.sleep(200);
+
+                        // Step 5: Verify text was entered
+                        String enteredText = element.getAttribute("text");
+                        if (enteredText != null && enteredText.contains(value)) {
+                            System.out.println("✓ Text entered successfully: " + value);
+                            return true;
+                        } else {
+                            System.out.println("⚠ Text might not be fully entered, retrying...");
+                            return false;
+                        }
+                    } catch (Exception e) {
+                        System.out.println("✗ Error entering text: " + e.getMessage());
+                        return false;
+                    }
                 });
     }
 
@@ -302,9 +338,17 @@ public class ActionUtilities {
         }
     }
 
+    public static boolean isKeyboardDisplayed() {
+        return (boolean) DriverThreadManager.getDriver()
+                .executeScript("mobile: isKeyboardShown");
+    }
 
-
-
+    public static void hideKeyboardIfDisplayed() {
+        if (isKeyboardDisplayed()) {
+            DriverThreadManager.getDriver()
+                    .executeScript("mobile: hideKeyboard");
+        }
+    }
 }
 
 

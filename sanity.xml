@@ -7,8 +7,8 @@
     </listeners>
     <test name="LawyerUIAutomation">
         <classes>
-      <!--      <class name="testcase.LoginTestCase"/>-->
-            <class name="testcase.AddBankAccountTestCase"/>
+      <!--      <class name="LawyerTestcase.LoginTestCase"/>-->
+            <class name="LawyerTestcase.TimeCalculationTestCase"/>
         </classes>
     </test>
 </suite>

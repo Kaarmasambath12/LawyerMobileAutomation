@@ -1,12 +1,8 @@
-package testcase;
+package LawyerTestcase;
 
 import base.BaseClass;
-import dataDriven.DataProviderClass;
 import org.testng.annotations.Test;
-import pages.LoginPage;
-
-
-import java.io.IOException;
+import lawyerPages.LoginPage;
 
 public class LoginTestCase extends BaseClass {
     public LoginPage loginPage;
@@ -19,7 +15,7 @@ public class LoginTestCase extends BaseClass {
         loginPage.clickLoginLink();
         loginPage.loginFunction();
         Thread.sleep(3000);
-       // loginPage.clickLoginButton();
+       loginPage.clickLoginButton();
 
       //  loginPage.logoutFunction();
     }

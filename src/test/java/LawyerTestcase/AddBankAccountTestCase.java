@@ -1,12 +1,9 @@
-package testcase;
+package LawyerTestcase;
 
 import base.BaseClass;
 import org.testng.annotations.Test;
-import pages.ConsultationsPage;
-import pages.HomePage;
-import pages.LoginPage;
-
-import java.io.IOException;
+import lawyerPages.HomePage;
+import lawyerPages.LoginPage;
 
 public class AddBankAccountTestCase extends BaseClass {
     public LoginPage loginPage;
@@ -20,9 +17,11 @@ public class AddBankAccountTestCase extends BaseClass {
 
         loginPage.clickLoginLink();
         loginPage.loginFunction();
-        homePage.addBankAccountDetails("HDFC", "Karthik",
+      /* homePage.addBankAccountDetails("HDFC", "Karthik",
                 "12345678912", "IDFC0000234" +
-                "test", "Chennai");
+                "test", "Chennai");*/
+
+        homePage.addAccountFunction();
     }
 
 }

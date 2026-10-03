@@ -22,14 +22,15 @@ public class MyAvailabilityHelper {
     }
 
     public static String selectNextQuarterTime() {
-
         LocalTime now = LocalTime.now();
 
-        int minutes = now.getMinute();
-        int remainder = minutes % 15;
-        int minutesToAdd = (remainder == 0) ? 15 : (15 - remainder);
+        LocalTime bufferTime = now.plusMinutes(15);
 
-        LocalTime nextQuarter = now.plusMinutes(minutesToAdd);
+        int minutes = bufferTime.getMinute();
+        int remainder = minutes % 15;
+        int minutesToAdd = (remainder == 0) ? 0 : (15 - remainder);
+
+        LocalTime nextQuarter = bufferTime.plusMinutes(minutesToAdd);
 
         DateTimeFormatter formatter =
                 DateTimeFormatter.ofPattern("h:mm a");
